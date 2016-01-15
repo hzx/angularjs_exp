@@ -1,0 +1,149 @@
+<!doctype html>
+<html ng-app="pmc">
+<head ng-controller="index">
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1.0">
+  <!-- meta http-equiv="X-UA-Compatible" content="IE=10; IE=9; IE=8; IE=7; IE=EDGE" / -->
+  <title>Park My Cloud</title>
+
+  <!-- TODO: cleanup deprecated after tests -->
+
+  <link rel="stylesheet" href="css/app.css">
+  <!-- <link href="css/reset.css" rel="stylesheet" media="screen" /> -->
+  <link href="fonts/fonts.css" rel="stylesheet">
+  <!-- <link href="css/common.css" rel="stylesheet" media="screen" /> -->
+  <link href="css/magnific-popup.css" rel="stylesheet" media="screen" />
+  <link href="css/jquery.datetimepicker.css" rel="stylesheet" media="screen" />
+
+  <link href="css/style.css" rel="stylesheet" media="screen" />
+  <link href="css/intro.css" rel="stylesheet" media="screen and (min-width: 980px)" />
+  <link href="css/style-980.css" rel="stylesheet" media="screen and (max-width: 980px)" />
+  <link href="css/style-800.css" rel="stylesheet" media="screen and (max-width: 800px)" />
+  <link href="css/style-550.css" rel="stylesheet" media="screen and (max-width: 550px)" />
+  <link href="css/style-400.css" rel="stylesheet" media="screen and (max-width: 400px)" />
+
+  <!-- <link rel="stylesheet" href="css/pmc.css"> -->
+  <!-- <link rel="stylesheet" href="css/main.css"> -->
+
+  <link rel="shortcut icon" type="image/png" href="images/favicon.png" />
+
+  <script src="js/jquery-1.11.3.min.js"></script>
+  <script src="js/jquery.cookie.js"></script>
+  <script src="js/jquery.slimscroll.js"></script>
+  <script src="js/jquery-ui.min.js"></script>
+  <script src="js/jquery.datetimepicker.full.min.js"></script>
+
+  <script src="js/modernizr.min.js"></script>
+  <script src="js/respond.min.js"></script>
+
+  <script src="js/angular.min.js"></script>
+  <script src="js/angular-translate.min.js"></script>
+  <script src="js/angular-translate-loader-static-files.min.js"></script>
+  <script src="js/angular-route.min.js"></script>
+  <script src="js/angular-cookies.min.js"></script>
+  <script src="js/angular-sanitize.min.js"></script>
+  <script src="js/ngStorage.min.js"></script>
+
+  <script src="js/angulartics.min.js"></script>
+  <script src="js/angulartics-ga.min.js"></script>
+  <script src="js/ng-optimizely.js"></script>
+  <script src="js/ng-infinite-scroll.min.js"></script>
+  <script src="js/ng-tags-input.js"></script>
+
+  <!-- <script src="js/pmc.js"></script> -->
+
+  <!-- <script src="js/app.js"></script> -->
+
+  <!-- <script src="app/controllers/main.js"></script> -->
+  <!-- <script src="app/controllers/index.js"></script> -->
+  <!-- <script src="app/controllers/login.js"></script> -->
+  <!-- <script src="app/controllers/resetPassword.js"></script> -->
+  <!-- <script src="app/controllers/providers.js"></script> -->
+  <!-- <script src="app/controllers/cloudKeys.js"></script> -->
+  <!-- <script src="app/controllers/amazon.js"></script> -->
+  <!-- <script src="app/controllers/dashboard.js"></script> -->
+  <!-- <script src="app/controllers/header.js"></script> -->
+  <!-- <script src="app/controllers/footer.js"></script> -->
+  <!-- <script src="app/controllers/savings.js"></script> -->
+  <!-- <script src="app/controllers/payment.js"></script> -->
+  <!-- <script src="app/controllers/register.js"></script> -->
+  <!-- <script src="app/controllers/profile.js"></script> -->
+  <!-- <script src="app/controllers/calendar.js"></script> -->
+  <!-- <script src="app/controllers/dialog.js"></script> -->
+  <!-- <script src="app/controllers/teams.js"></script> -->
+  <!-- <script src="app/controllers/users.js"></script> -->
+  <!-- <script src="app/controllers/credentials.js"></script> -->
+
+  <!-- <script src="app/services/account.js"></script> -->
+  <!-- <script src="app/services/recommendations.js"></script> -->
+  <!-- <script src="app/services/dashboard.js"></script> -->
+  <!-- <script src="app/services/payment.js"></script> -->
+  <!-- <script src="app/services/keys.js"></script> -->
+  <!-- <script src="app/services/calendar.js"></script> -->
+  <!-- <script src="app/services/analytics.js"></script> -->
+  <!-- <script src="app/services/instructions.js"></script> -->
+  <!-- <script src="app/services/data.js"></script> -->
+  <!-- <script src="app/services/config.js"></script> -->
+  <!-- <script src="app/services/teamManagement.js"></script> -->
+
+  <!-- <script src="app/directives/switch/switch.js"></script> -->
+  <!-- <script src="app/directives/move2TeamDialog/move2TeamDialog.js"></script> -->
+  <!-- <script src="app/directives/columnSettingsPopup/columnSettingsPopup.js"></script> -->
+  <!-- <script src="app/directives/subHeader/subHeader.js"></script> -->
+  <!-- <script src="app/directives/teamDialog/teamDialog.js"></script> -->
+  <!-- <script src="app/directives/userDialog/userDialog.js"></script> -->
+  <!-- <script src="app/directives/credDialog/credDialog.js"></script> -->
+  <!-- <script src="app/directives/compareTo/compareTo.js"></script> -->
+
+  <!-- app utils -->
+  <!-- <script src="js/string-utils.js"></script> -->
+
+  <!-- <script src="js/manage-account.js"></script> -->
+
+  <!-- <script src="js/data-grid.js"></script> -->
+  <!-- <script src="js/search.js"></script> -->
+  <!-- <script src="js/manage-schedules.js"></script> -->
+  <!-- <script src="js/dropdown.js"></script> -->
+  <!-- <script src="js/pop-savings.js"></script> -->
+  <!-- <script src="js/intro.js"></script> -->
+  <!-- <script src="js/intro-schedule.js"></script> -->
+  <!-- <script src="js/ga-tracking.js"></script> -->
+  <!-- <script src="js/fb-tracking.js"></script> -->
+
+  <!-- <script type="text/javascript" src="js/jquery.min.js"></script> -->
+  <!-- <script type="text/javascript" src="js/jquery.cookie.js"></script> -->
+  <!-- <script type="text/javascript" src="js/jquery.slimscroll.js"></script> -->
+  <!-- <script type="text/javascript" src="js/jquery-ui.min.js"></script> -->
+  <!-- <script type="text/javascript" src="js/jquery.datetimepicker.full.min.js"></script> -->
+  <!-- <script type="text/javascript" src="js/modernizr.min.js"></script> -->
+  <!-- <script type="text/javascript" src="js/respond.min.js"></script> -->
+  <!-- <script type="text/javascript" src="js/angular.js"></script> -->
+  <!-- <script type="text/javascript" src="js/angular-cookies.js"></script> -->
+  <!-- <script type="text/javascript" src="js/angular-route.js"></script> -->
+  <!-- <script type="text/javascript" src="js/angular-sanitize.js"></script> -->
+  <!-- <script type="text/javascript" src="js/angular-translate.js"></script> -->
+  <!-- <script type="text/javascript" src="js/angular-translate-loader-static-files.js"></script> -->
+  <!-- <script type="text/javascript" src="js/angularLocalStorage.min.js"></script> -->
+  <!-- <script type="text/javascript" src="js/angulartics.min.js"></script> -->
+  <!-- <script type="text/javascript" src="js/angulartics-ga-cordova-google-analytics-plugin.min.js"></script> -->
+  <!-- <script type="text/javascript" src="js/ng-optimizely.js"></script> -->
+  <!-- <script type="text/javascript" src="js/ng-infinite-scroll.min.js"></script> -->
+  <!-- <script type="text/javascript" src="js/ng-tags-input.js"></script> -->
+  <script type="text/javascript" src="js/app.js"></script>
+
+  <noscript ng-show="controller == 'register'"><img height="1" width="1" alt="" style="display:none" src="https://www.facebook.com/tr?ev=463907553796871&amp;cd[value]=0.00&amp;cd[currency]&amp;noscript=1" /></noscript>
+
+  <script type="text/javascript">
+    angular.element(document.getElementsByTagName('head')).append(angular.element('<base href="' + window.location.pathname + '" />'));
+  </script>
+</head>
+
+<body class="subpage">
+  <!-- controller = {{controller}} -->
+  <div class="pmc-layout" ng-controller="main">
+    <header class="pmc-layout-header" pmc-header ng-controller="header"></header>
+    <main class="pmc-layout-main" ng-view role="main" autoscroll="true" ng-cloak></main>
+    <footer class="pmc-layout-footer" pmc-footer ng-controller="footer"></footer>
+  </div>
+</body>
+</html>
